@@ -1,7 +1,9 @@
-$x: 1;
-@while $x < 6 {
-    .text-#{$x} {
-        font-size: 15px * $x;
-    }
-    $x: $x + 1;
-}
+$primary-color: #608dda;
+$secondary-color: #213547;
+$tertiary-color: #535bf2;
+$white-color: #ffffff;
+$black-color: #000000;
+
+$font: 'Inter', sans-serif;
+$line-height: 1.5;
+$font-weight: 400;

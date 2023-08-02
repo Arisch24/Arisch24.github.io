@@ -1,3 +1,35 @@
+// Basic mixins
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: quote($font-name);
+        src: url($path+".eot");
+        src: url($path+".eot?#iefix") format("embedded-opentype"), url($path+".woff")
+            format("woff"), url($path+".ttf") format("truetype"), url($path+".svg##{$font-name}")
+            format("svg");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+       -moz-box-sizing: $box-model; // Firefox <= 19
+            box-sizing: $box-model;
+}
+
+// Styling
+@mixin cover-background($repeat: no-repeat, $size: cover, $position: center) {
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position: $position;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin box-shadow($x, $y, $blur, $spread, $color){ 
     -webkit-box-shadow: $x $y $blur $spread $color;
     -moz-box-shadow: $x $y $blur $spread $color;
@@ -10,4 +42,61 @@
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
+}
+
+@mixin transform($property, $x: 0, $y: 0) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin abs-position ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: absolute; 
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+// Media queries
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+@mixin tablet {
+    @media only screen and (min-width: ($tablet * 1px)) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: ($large * 1px)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: ($desktop * 1px)) {
+        @content;
+    }
 }
