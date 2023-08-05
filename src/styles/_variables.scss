@@ -1,9 +1,20 @@
-$primary-color: #608dda;
-$secondary-color: #213547;
-$tertiary-color: #535bf2;
+// colors
+$primary-color: #2f4858;
+$secondary-color: #33658a;
+$light-color: #86bbd8;
+$accent-color: #f26419;
+$light-accent-color: #f6ae2d;
+$grey-color: #b5b5b5;
+$dark-grey: #929292;
 $white-color: #ffffff;
 $black-color: #000000;
 
-$font: 'Inter', sans-serif;
+$font: 'Montserrat', sans-serif;
 $line-height: 1.5;
 $font-weight: 400;
+
+@for $i from 1 through 6 {
+    .heading-#{$i} {
+        font-size: calc(6 / $i) * 14px;
+    }
+}

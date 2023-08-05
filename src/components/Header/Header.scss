@@ -1,0 +1,74 @@
+@import '/src/styles/mixins';
+@import '/src/styles/variables';
+
+.header {
+    background-color: $primary-color;
+    font-size: 18px;
+    font-weight: 500;
+    color: $white-color;
+
+    .nav-container {
+        display: flex;
+        padding: 2rem;
+        justify-content: space-between;
+
+        & > a {
+            text-transform: uppercase;
+        }
+        
+        ul {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            
+            li a {
+                padding: 2rem;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    height: 3px;
+                    width: 0%;
+                    background-color: $accent-color;
+                    display: block;
+                    @include abs-position(auto, auto, 10px, 0);
+                    transition: width 200ms ease;
+                }
+
+                &:hover:before {
+                    width: 100%;
+                }
+            }
+
+            .contact-btn {
+                padding: 1rem;
+                font-weight: 500;
+                border: 2px solid $accent-color;
+                color: $accent-color;
+                border-radius: 4.16vw 4.16vw 4.16vw 4.16vw;
+                transition: background-color 200ms ease-in-out;
+            
+                &::after{
+                    content: "\0279E"; // arrow right unicode
+                    display: inline-block;
+                    padding-left: 6px;
+                    transition: transform 200ms ease-in-out;
+                }
+            
+                &:hover {
+                    background-color: $accent-color;
+                    color: $white-color;
+            
+                    &::after{
+                        $offset: 6px;
+                        -webkit-transform: translateX($offset);
+                        -moz-transform: translateX($offset);
+                        -ms-transform: translateX($offset);
+                        -o-transform: translateX($offset);
+                        transform: translateX($offset);
+                    }
+                }
+            }
+        }
+    }
+}

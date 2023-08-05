@@ -44,6 +44,13 @@
     border-radius: $radius;
 }
 
+@mixin border-radius-adjustable($top-left: auto, $top-right: auto, $bottom-left: auto, $bottom-right: auto) {
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-left-radius: $bottom-left;
+    border-bottom-right-radius: $bottom-right;
+}
+
 @mixin transform($property, $x: 0, $y: 0) {
     -webkit-transform: translate($x, $y);
     -moz-transform: translate($x, $y);
