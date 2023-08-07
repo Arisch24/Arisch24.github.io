@@ -1,20 +1,21 @@
 // colors
-$primary-color: #2f4858;
-$secondary-color: #33658a;
-$light-color: #86bbd8;
-$accent-color: #f26419;
-$light-accent-color: #f6ae2d;
-$grey-color: #b5b5b5;
-$dark-grey: #929292;
-$white-color: #ffffff;
-$black-color: #000000;
+$primary-color: rgb(0, 35, 56);
+$secondary-color: rgb(43, 121, 181);
+$light-color: rgb(136, 188, 216);
+$accent-color: rgb(242, 100, 25);
+$light-accent-color: rgb(255, 189, 75);
+$text-color: rgb(150 161 192);
 
-$font: 'Montserrat', sans-serif;
+$grey-color: rgb(222, 222, 222);
+$dark-grey: rgb(146, 146, 146);
+$white-color: rgb(255, 255, 255);
+$black-color: rgb(0, 0, 0);
+
+$font: 'Inter';
 $line-height: 1.5;
-$font-weight: 400;
+$font-weight: 300;
 
-@for $i from 1 through 6 {
-    .heading-#{$i} {
-        font-size: calc(6 / $i) * 14px;
-    }
-}
+// Glassmorphism
+$box-shadow-color: rgba(255, 255, 255, 0.1);
+$border-color: rgba(255, 255, 255, 0.3);
+$background-color: rgba(237, 147, 147, 0.2);

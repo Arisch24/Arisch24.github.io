@@ -53,7 +53,7 @@ export default function Languages() {
 
     return (
       <section className='lang-section'>
-        <h2 className='heading-2'>Technologies &amp; Languages</h2>
+        <h2 className='text-1 heading'>Technologies &amp; Languages</h2>
         <div className='carousel'>
             {langList.map((lang, i) => {
                 return (

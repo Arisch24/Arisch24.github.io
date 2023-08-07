@@ -3,7 +3,11 @@
 
 .header {
     background-color: $primary-color;
-    font-size: 18px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
     font-weight: 500;
     color: $white-color;
 
@@ -11,19 +15,21 @@
         display: flex;
         padding: 2rem;
         justify-content: space-between;
+        align-items: center;
 
         & > a {
             text-transform: uppercase;
+            color: $white-color;
         }
         
         ul {
             display: flex;
             align-items: center;
-            column-gap: 2rem;
             
             li a {
                 padding: 2rem;
                 position: relative;
+                color: $white-color;
 
                 &:before {
                     content: '';
@@ -32,7 +38,7 @@
                     background-color: $accent-color;
                     display: block;
                     @include abs-position(auto, auto, 10px, 0);
-                    transition: width 200ms ease;
+                    transition: width 500ms ease;
                 }
 
                 &:hover:before {
@@ -46,7 +52,7 @@
                 border: 2px solid $accent-color;
                 color: $accent-color;
                 border-radius: 4.16vw 4.16vw 4.16vw 4.16vw;
-                transition: background-color 200ms ease-in-out;
+                transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
             
                 &::after{
                     content: "\0279E"; // arrow right unicode
@@ -71,4 +77,9 @@
             }
         }
     }
+}
+
+.header.scroll {
+    background-color: $secondary-color;
+    transition: background-color 200ms ease;
 }

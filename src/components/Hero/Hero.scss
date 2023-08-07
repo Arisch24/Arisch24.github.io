@@ -2,33 +2,23 @@
 @import '/src/styles/variables';
 
 .hero-section {
-    background-color: $primary-color;
+    margin-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
-    padding: 4rem 8rem;
-    color: $white-color;
+    padding-block: 4rem;
 
     & > div:first-child {
         padding: 1.5rem;
     }
 
     h1 {
-        span {
-            display: block;
-            
-            span {
-                display: inline;
-                background: linear-gradient(90deg, rgb(74, 108, 243) 10%, rgba(0,212,255,1) 50%, rgba(255, 255, 255, 1) 90%);
-                -webkit-text-fill-color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-            }
-        }
+        font-size: 90px;
+        color: $white-color;
     }
 
-    pre {
+    p {
         font-weight: 400;
         white-space: normal;
     }
@@ -37,23 +27,23 @@
         margin-top: 1em;
         display: flex;
         column-gap: 1em;
-
+        
         .github {
+            color: inherit;
+            transition: color 250ms ease;
+        }
+
+        .github:hover {
             color: $black-color;
-            transition: color 500ms ease;
         }
         
-        .github:hover {
-            color: inherit;
-        }
-
         .linkedin {
-            transition: color 500ms ease;
-            color: #0A66C2;
+            color: inherit;
+            transition: color 250ms ease;
         }
 
         .linkedin:hover {
-            color: inherit;
+            color: #0A66C2;
         }
     }
 
@@ -67,22 +57,35 @@
             $img-height: 500px;
             width: $img-width;
             height: $img-height;
-            @include border-radius-adjustable(5rem, 5rem, 5rem, 5rem);
-            // @include box-shadow($x-offset, $y-offset, 120px, 0px, $black-color);
             object-fit: cover;
             position: relative;
-            filter: brightness(90%);
+            filter: brightness(85%);
+            transition: filter 200ms ease;
+
+            &:hover {
+                filter: brightness(100%);
+            }
         }
 
         &::before {
             content: '';
             width: 500px;
             height: 500px;
-            @include border-radius-adjustable(5rem, 5rem, 5rem, 5rem);
             position: absolute;
-            top: 30px;
-            left: 30px;
-            border: 2px solid $accent-color;
+            top: 20px;
+            left: 20px;
+            border: 3px solid $accent-color;
+        }
+
+        &::after {
+            content: '';
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            z-index: -1;
+            top: 35px;
+            left: 40px;
+            border: 3px solid $accent-color;
         }
     }
 }

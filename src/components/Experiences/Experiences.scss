@@ -1,0 +1,38 @@
+@import '/src/styles/mixins';
+@import '/src/styles/variables';
+
+.experiences-section {
+
+    .showcase {
+        margin-bottom: 2em;
+
+        .row {
+            display: grid;
+            grid-template-columns: 500px 1fr;
+
+            .date, .description {
+                padding: 2em;
+            }
+            
+            .description {
+                border-left: 1px solid $light-color;
+            }
+
+            li:not(:last-of-type) {
+                margin-bottom: 0.5em;
+            }
+        }
+        
+        .row:not(:last-child) {
+            border-bottom: 1px solid $light-color;
+        }
+    }
+
+    .resume-btn {
+        display: inline-block;
+        color: $white-color;
+        padding: 1em;
+        background-color: $accent-color;
+        @include border-radius(4.16vw);
+    }
+}

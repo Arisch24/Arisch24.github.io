@@ -2,20 +2,16 @@
 @import '/src/styles/variables';
 
 .lang-section {
-    background-color: $white-color;
-    padding: 2rem;
-    user-select: none;
-    color: $primary-color;
     min-height: 500px;
-
-    .heading-2{
-        text-align: center;
-        margin-bottom: 2rem;
+    
+    h2 {
+        margin-bottom: 1rem;
     }
-
+    
     .carousel {
+        user-select: none;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
 
         .c-item {

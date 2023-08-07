@@ -2,14 +2,16 @@ import MeInCafe from "../../assets/me-in-cafe.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import './Hero.scss';
 
-const linkStyles = { width: '50px', height: '50px'}
+const linkStyles = { width: '40px', height: '40px'}
 
 export default function Hero() {
     return (
         <section className='hero-section'>
             <div>
-                <h1 className='heading-1'>Hi👋, <span>I'm <span>Arischvaran.</span></span></h1>
-                <pre className='heading-4'>An aspiring and passionate Software/Web Developer that is based in Malaysia.</pre>
+                <h2 className='text-5'>Hi👋, I'm</h2>
+                <h1>Arischvaran.</h1>
+                <p className='text-8'>An aspiring and passionate Software/Web Developer 
+                based in Malaysia.</p>
                 <div className='links-container'>
                     <a target='_blank' href="https://github.com/Arisch24/" className='github'>
                         <FaGithub style={linkStyles}></FaGithub>
