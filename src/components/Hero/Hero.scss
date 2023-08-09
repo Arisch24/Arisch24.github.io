@@ -9,39 +9,31 @@
 	justify-items: center;
 	padding-block: 4rem;
 
-	& > div:first-child {
-		padding: 1.5rem;
-	}
+	.hero-cta {
+		padding: 1rem;
+		h1 {
+			font-size: 90px;
+			color: $white-color;
+			.underscore {
+				animation: blinking 1s ease 2s forwards infinite;
 
-	h1 {
-		font-size: 90px;
-		color: $white-color;
-	}
-
-	p {
-		font-weight: 400;
-		white-space: normal;
-	}
-
-	.links-container {
-		margin-top: 1em;
-		display: flex;
-		column-gap: 1em;
-
-		.github {
-			transition: color 250ms ease;
+				@keyframes blinking {
+					0% {
+						opacity: 0;
+					}
+					50% {
+						opacity: 1;
+					}
+					100% {
+						opacity: 0;
+					}
+				}
+			}
 		}
 
-		.github:hover {
-			color: $black-color;
-		}
-
-		.linkedin {
-			transition: color 250ms ease;
-		}
-
-		.linkedin:hover {
-			color: #0a66c2;
+		p {
+			font-weight: 400;
+			white-space: normal;
 		}
 	}
 

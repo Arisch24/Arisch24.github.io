@@ -15,23 +15,15 @@ export default function AboutMe() {
 
 	useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
-			gsap.timeline()
-				.from('h2', {
-					opacity: 0,
-					y: -100,
-					scrollTrigger: {
-						...triggerOptions,
-						trigger: '.about-container',
-					},
-				})
-				.from('.about-container', {
-					opacity: 0,
-					y: -100,
-					scrollTrigger: {
-						...triggerOptions,
-						trigger: '.about-container',
-					},
-				});
+			gsap.timeline().from(['h2', '.about-container'], {
+				opacity: 0,
+				y: -100,
+				scrollTrigger: {
+					...triggerOptions,
+					trigger: 'h2',
+				},
+				stagger: 0.5,
+			});
 		}, aboutComponent);
 		return () => {
 			ctx.revert();

@@ -2,6 +2,9 @@ import { HiOutlineArrowTopRightOnSquare } from 'react-icons/hi2';
 import portfolioMe from '../../assets/portfolioMe.png';
 import './Projects.scss';
 
+import { useRef, useLayoutEffect } from 'react';
+import { gsap } from 'gsap';
+
 const projects = [
 	{
 		className: 'project-card item-1',
@@ -37,9 +40,45 @@ const styles = {
 	right: '5px',
 };
 
+const triggerOptions = {
+	start: 'top 80%',
+	end: 'top 20%',
+	scrub: 1,
+};
+
 export default function Projects() {
+	const projectsComponent = useRef(null);
+
+	useLayoutEffect(() => {
+		let ctx = gsap.context(() => {
+			gsap.timeline()
+				.from('h2', {
+					opacity: 0,
+					y: -100,
+					scrollTrigger: {
+						...triggerOptions,
+						trigger: 'h2',
+					},
+				})
+				.from('.project-card', {
+					opacity: 0,
+					y: -100,
+					scrollTrigger: {
+						...triggerOptions,
+						trigger: '.project-card',
+					},
+					stagger: 0.6,
+				});
+		}, projectsComponent);
+		return () => {
+			ctx.revert();
+		};
+	}, []);
 	return (
-		<section className="projects-section" id="projects">
+		<section
+			className="projects-section"
+			id="projects"
+			ref={projectsComponent}>
 			<h2 className="text-1 heading">Projects</h2>
 			<div className="projects-grid">
 				{projects.map((project, i) => {

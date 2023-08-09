@@ -16,24 +16,15 @@ export default function Experiences() {
 
 	useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
-			gsap.timeline()
-				.from('h2', {
-					opacity: 0,
-					y: -50,
-					scrollTrigger: {
-						...triggerOptions,
-						trigger: 'h2',
-					},
-				})
-				.from(['.showcase', '.resume-btn'], {
-					opacity: 0,
-					y: -100,
-					scrollTrigger: {
-						...triggerOptions,
-						trigger: '.showcase',
-					},
-					stagger: 0.5,
-				});
+			gsap.from(['h2', '.showcase', '.resume-btn'], {
+				opacity: 0,
+				y: -100,
+				scrollTrigger: {
+					...triggerOptions,
+					trigger: ['h2'],
+				},
+				stagger: 0.5,
+			});
 		}, experiencesComponent);
 		return () => {
 			ctx.revert();
