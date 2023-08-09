@@ -2,84 +2,85 @@
 @import '/src/styles/variables';
 
 .header {
-    background-color: $primary-color;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    font-weight: 500;
-    color: $white-color;
+	background-color: $primary-color;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	font-weight: 500;
+	color: $white-color;
 
-    .nav-container {
-        display: flex;
-        padding: 2rem;
-        justify-content: space-between;
-        align-items: center;
+	.nav-container {
+		display: flex;
+		padding: 1rem;
+		justify-content: space-between;
+		align-items: center;
 
-        & > a {
-            text-transform: uppercase;
-            color: $white-color;
-        }
-        
-        ul {
-            display: flex;
-            align-items: center;
-            
-            li a {
-                padding: 2rem;
-                position: relative;
-                color: $white-color;
+		& > a {
+			text-transform: uppercase;
+			color: $white-color;
+		}
 
-                &:before {
-                    content: '';
-                    height: 3px;
-                    width: 0%;
-                    background-color: $accent-color;
-                    display: block;
-                    @include abs-position(auto, auto, 10px, 0);
-                    transition: width 500ms ease;
-                }
+		ul {
+			display: flex;
+			align-items: center;
 
-                &:hover:before {
-                    width: 100%;
-                }
-            }
+			li a {
+				padding: 2rem;
+				position: relative;
+				color: $white-color;
 
-            .contact-btn {
-                padding: 1rem;
-                font-weight: 500;
-                border: 2px solid $accent-color;
-                color: $accent-color;
-                border-radius: 4.16vw 4.16vw 4.16vw 4.16vw;
-                transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
-            
-                &::after{
-                    content: "\0279E"; // arrow right unicode
-                    display: inline-block;
-                    padding-left: 6px;
-                    transition: transform 200ms ease-in-out;
-                }
-            
-                &:hover {
-                    background-color: $accent-color;
-                    color: $white-color;
-            
-                    &::after{
-                        $offset: 6px;
-                        -webkit-transform: translateX($offset);
-                        -moz-transform: translateX($offset);
-                        -ms-transform: translateX($offset);
-                        -o-transform: translateX($offset);
-                        transform: translateX($offset);
-                    }
-                }
-            }
-        }
-    }
+				&:before {
+					content: '';
+					height: 3px;
+					width: 0%;
+					background-color: $accent-color;
+					display: block;
+					@include abs-position(auto, auto, 10px, 0);
+					transition: width 500ms ease;
+				}
+
+				&:hover:before {
+					width: 100%;
+				}
+			}
+
+			.contact-btn {
+				padding: 1rem;
+				font-weight: 500;
+				border: 2px solid $accent-color;
+				color: $accent-color;
+				border-radius: 4.16vw 4.16vw 4.16vw 4.16vw;
+				transition: background-color 300ms ease-in-out,
+					color 300ms ease-in-out;
+
+				&::after {
+					content: '\0279E'; // arrow right unicode
+					display: inline-block;
+					padding-left: 6px;
+					transition: transform 200ms ease-in-out;
+				}
+
+				&:hover {
+					background-color: $accent-color;
+					color: $white-color;
+
+					&::after {
+						$offset: 6px;
+						-webkit-transform: translateX($offset);
+						-moz-transform: translateX($offset);
+						-ms-transform: translateX($offset);
+						-o-transform: translateX($offset);
+						transform: translateX($offset);
+					}
+				}
+			}
+		}
+	}
 }
 
 .header.scroll {
-    background-color: $secondary-color;
-    transition: background-color 200ms ease;
+	background-color: $header-color;
+	transition: background-color 400ms ease;
 }

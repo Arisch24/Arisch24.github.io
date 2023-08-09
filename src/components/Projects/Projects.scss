@@ -2,21 +2,76 @@
 @import '/src/styles/variables';
 
 .projects-section {
-    div {
-        padding: 2em;
-        width: 450px;
-        height: 450px;
-        background: $background-color;
-        border-radius: 16px;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid $border-color;
-        transition: box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
-        box-shadow: none;
-        
-        &:hover {
-            box-shadow: 0 4px 30px $box-shadow-color;
-            transform: translate(0, -5px);
-        }
-    }
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 400px 600px;
+		gap: 2rem;
+		width: 100%;
+
+		.project-card {
+			display: block;
+			position: relative;
+			cursor: pointer;
+			box-shadow: none;
+			border-radius: 16px;
+			backdrop-filter: blur(5px);
+			-webkit-backdrop-filter: blur(5px);
+			border: 1px solid $border-color;
+			transition: box-shadow 200ms ease-in-out;
+			overflow: hidden;
+
+			&.item-2 {
+				&::before {
+					background: url('/src/assets/juanjo-jaramillo-mZnx9429i94-unsplash.jpg')
+						center;
+				}
+			}
+
+			&.item-3 {
+				grid-column: span 2;
+				&::before {
+					filter: brightness(80%);
+					background: url('/src/assets/portfolioMe.png') center;
+				}
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				border-radius: inherit;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				transition: transform 200ms ease;
+			}
+
+			&:hover {
+				box-shadow: 0 4px 40px $box-shadow-color;
+				&::before {
+					transform: scale(1.2);
+				}
+				.content {
+					opacity: 1;
+				}
+			}
+
+			.content {
+				@include flex-center();
+				flex-direction: column;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				border-radius: inherit;
+				padding-inline: 8rem;
+				color: $white-color;
+				opacity: 0;
+				backdrop-filter: blur(10px);
+				background-color: rgba(0 0 0 / 0.5);
+				transition: opacity 200ms ease, background-color 200ms ease;
+			}
+		}
+	}
 }

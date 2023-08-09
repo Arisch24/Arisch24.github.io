@@ -2,90 +2,86 @@
 @import '/src/styles/variables';
 
 .hero-section {
-    margin-top: 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    padding-block: 4rem;
+	margin-top: 6rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+	padding-block: 4rem;
 
-    & > div:first-child {
-        padding: 1.5rem;
-    }
+	& > div:first-child {
+		padding: 1.5rem;
+	}
 
-    h1 {
-        font-size: 90px;
-        color: $white-color;
-    }
+	h1 {
+		font-size: 90px;
+		color: $white-color;
+	}
 
-    p {
-        font-weight: 400;
-        white-space: normal;
-    }
+	p {
+		font-weight: 400;
+		white-space: normal;
+	}
 
-    .links-container {
-        margin-top: 1em;
-        display: flex;
-        column-gap: 1em;
-        
-        .github {
-            color: inherit;
-            transition: color 250ms ease;
-        }
+	.links-container {
+		margin-top: 1em;
+		display: flex;
+		column-gap: 1em;
 
-        .github:hover {
-            color: $black-color;
-        }
-        
-        .linkedin {
-            color: inherit;
-            transition: color 250ms ease;
-        }
+		.github {
+			transition: color 250ms ease;
+		}
 
-        .linkedin:hover {
-            color: #0A66C2;
-        }
-    }
+		.github:hover {
+			color: $black-color;
+		}
 
-    .img-container {
-        position: relative;
+		.linkedin {
+			transition: color 250ms ease;
+		}
 
-        img {
-            $x-offset: 40px;
-            $y-offset: 40px;
-            $img-width: 500px;
-            $img-height: 500px;
-            width: $img-width;
-            height: $img-height;
-            object-fit: cover;
-            position: relative;
-            filter: brightness(85%);
-            transition: filter 200ms ease;
+		.linkedin:hover {
+			color: #0a66c2;
+		}
+	}
 
-            &:hover {
-                filter: brightness(100%);
-            }
-        }
+	.img-container {
+		position: relative;
+		$img-width: 600px;
+		$img-height: 600px;
 
-        &::before {
-            content: '';
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            border: 3px solid $accent-color;
-        }
+		img {
+			width: $img-width;
+			height: $img-height;
+			object-fit: cover;
+			position: relative;
+			filter: brightness(85%);
+			transition: filter 200ms ease;
 
-        &::after {
-            content: '';
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            z-index: -1;
-            top: 35px;
-            left: 40px;
-            border: 3px solid $accent-color;
-        }
-    }
+			&:hover {
+				filter: brightness(100%);
+			}
+		}
+
+		&::before {
+			content: '';
+			width: $img-width;
+			height: $img-height;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			border: 3px solid $accent-color;
+		}
+
+		&::after {
+			content: '';
+			width: $img-width;
+			height: $img-height;
+			position: absolute;
+			z-index: -1;
+			top: 35px;
+			left: 40px;
+			border: 3px solid $accent-color;
+		}
+	}
 }

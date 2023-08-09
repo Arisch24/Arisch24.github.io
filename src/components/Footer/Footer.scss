@@ -1,8 +1,14 @@
 @import '/src/styles/mixins';
 @import '/src/styles/variables';
 
-footer {
-    // background-color: $light-accent-color;
-    // background-color: $black-color;
-    // color: $white-color;
+.footer {
+	.footer-section {
+		display: flex;
+		justify-content: space-between;
+
+		.socials {
+			display: flex;
+			column-gap: 2rem;
+		}
+	}
 }

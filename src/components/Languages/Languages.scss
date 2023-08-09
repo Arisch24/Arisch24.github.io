@@ -2,32 +2,31 @@
 @import '/src/styles/variables';
 
 .lang-section {
-    min-height: 500px;
-    
-    h2 {
-        margin-bottom: 1rem;
-    }
-    
-    .carousel {
-        user-select: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+	min-height: 500px;
 
-        .c-item {
-            @include flex-center;
-            flex-direction: column;
-            row-gap: 1rem;
+	h2 {
+		margin-bottom: 1rem;
+	}
 
-            img {
-                width: 75px;
-                height: 75px;
-            }
+	.carousel {
+		user-select: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-            p {
-                font-weight: 700;
-            }
-        }
+		.c-item {
+			@include flex-center;
+			flex-direction: column;
+			row-gap: 1rem;
 
-    }
+			img {
+				width: 100px;
+				height: 100px;
+			}
+
+			p {
+				font-weight: 700;
+			}
+		}
+	}
 }
