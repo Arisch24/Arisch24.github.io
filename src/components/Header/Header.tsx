@@ -1,6 +1,6 @@
 import './Header.scss';
 
-let links = [
+const links = [
 	{
 		name: 'About Me',
 		href: '#aboutMe',
@@ -28,7 +28,9 @@ export default function Header({ toggleClass }: { toggleClass: string }) {
 							</li>
 						);
 					})}
-					<a className="contact-btn" href="#contactMe">
+					<a
+						className="contact-btn"
+						href="mailto:arischvaran00@gmail.com">
 						Contact Me
 					</a>
 				</ul>

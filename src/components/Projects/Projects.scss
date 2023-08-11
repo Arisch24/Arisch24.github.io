@@ -19,20 +19,27 @@
 			-webkit-backdrop-filter: blur(5px);
 			border: 1px solid $border-color;
 			transition: box-shadow 200ms ease-in-out;
+			filter: brightness(80%);
 			overflow: hidden;
+
+			&.item-1 {
+				&::before {
+					background: url('/src/assets/fintech-hackathon.png') top
+						left;
+				}
+			}
 
 			&.item-2 {
 				&::before {
-					background: url('/src/assets/juanjo-jaramillo-mZnx9429i94-unsplash.jpg')
-						center;
+					background: url('/src/assets/restaurant-finder.png') top
+						left;
 				}
 			}
 
 			&.item-3 {
 				grid-column: span 2;
 				&::before {
-					filter: brightness(80%);
-					background: url('/src/assets/portfolioMe.png') center;
+					background: url('/src/assets/portfolioMe.png') top left;
 				}
 			}
 

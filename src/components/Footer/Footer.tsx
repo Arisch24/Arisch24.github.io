@@ -13,7 +13,7 @@ export default function Footer() {
 	const footerComponent = useRef(null);
 
 	useLayoutEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			gsap.from(
 				[
 					'.copyright',

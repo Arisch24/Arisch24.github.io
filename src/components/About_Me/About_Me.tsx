@@ -11,10 +11,10 @@ const triggerOptions = {
 };
 
 export default function AboutMe() {
-	let aboutComponent = useRef(null);
+	const aboutComponent = useRef(null);
 
 	useLayoutEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			gsap.timeline().from(['h2', '.about-container'], {
 				opacity: 0,
 				y: -100,
@@ -39,41 +39,25 @@ export default function AboutMe() {
 				</div>
 				<div className="about-content">
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Maiores aliquid necessitatibus atque perferendis eos
-						voluptates qui, laborum error ut distinctio temporibus
-						praesentium velit officia{' '}
-						<a href="#" className="text-light">
-							omg so good
-						</a>{' '}
-						eius earum adipisci. Suscipit doloribus earum in beatae
-						molestiae? Laudantium pariatur qui, sunt eligendi eius,
-						dolorem, optio cupiditate veritatis ratione nihil
-						aperiam labore rem beatae officia odio quisquam
-						veniam!empore enim distinctio nam tempora et quisquam{' '}
-						<b>obcaecati</b> id. In placeat nemo quaerat sapiente
-						qui rem. Iste, odio. Rem corporis repellendus quibusdam
-						enim iusto consequuntur repellat temporibus blanditiis
-						vitae expedita harum recusandae eaque voluptates ea
-						excepturi delectus, debitis accusamus impedit eligendi
-						veritatis eum.
+						I'm a 23 year old fresh graduate that is currently
+						expanding my knowledge in many areas of Computer
+						Science/Information Technology which consists of{' '}
+						<b className="text-light">Software/Web development</b>{' '}
+						and{' '}
+						<b className="text-light">Artificial Intelligence</b>{' '}
+						and <b className="text-light">Cyber Security</b>. I'm
+						currently working on some{' '}
+						<b className="text-light">open source projects</b> and
+						I'm also looking for a job in the software industry. I
+						love building complex applications and have a knack for
+						problem solving.
 					</p>
 					<p>
-						<b>Qui rem reiciendis</b> iste, fuga provident voluptate
-						iure aspernatur! Accusamus ab voluptatem nostrum soluta
-						sed minus saepe inventore hic sequi voluptatum rerum
-						perspiciatis dolorem maxime modi aliquid animi, culpa
-						sit dignissimos illum tempore magnam eum unde adipisci
-						doloribus! Voluptatibus, sapiente explicabo! Nesciunt,
-						dolorum iste doloribus minus officiis maxime incidunt
-						asperiores, dolore dicta qui voluptatum saepe quos
-						corrupti, et eos. Doloribus doloremque cupiditate quae
-						voluptas adipisci incidunt qui. Maiores sapiente
-						consequuntur nostrum molestias? Pariatur modi deserunt
-						aut sit rem natus error magnam dignissimos, sed minima
-						deleniti! Neque hic provident quo sapiente officia,
-						necessitatibus quidem mollitia, sit aliquid, expedita
-						totam ex beatae fuga impedit.
+						During my free time, I love playing some video games as
+						well as working out or playing football from time to
+						time. I love to travel as well and have a taste bud for
+						all types of foods from various cultures during my
+						travels.
 					</p>
 				</div>
 			</div>

@@ -61,7 +61,7 @@ export default function Languages() {
 	const languageComponent = useRef(null);
 
 	useLayoutEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			gsap.timeline()
 				.from('h2', {
 					opacity: 0,

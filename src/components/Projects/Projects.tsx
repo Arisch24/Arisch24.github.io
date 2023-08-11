@@ -1,5 +1,7 @@
 import { HiOutlineArrowTopRightOnSquare } from 'react-icons/hi2';
 import portfolioMe from '../../assets/portfolioMe.png';
+import fintechHackathon from '../../assets/fintech-hackathon.png';
+import restaurantFinder from '../../assets/restaurant-finder.png';
 import './Projects.scss';
 
 import { useRef, useLayoutEffect } from 'react';
@@ -9,7 +11,7 @@ const projects = [
 	{
 		className: 'project-card item-1',
 		title: 'Fintech Hackathon Submission',
-		image: '',
+		image: fintechHackathon,
 		url: 'https://github.com/Arisch24/Fintech-Hackathon-Submission',
 		description:
 			"A card and payment storage system to view the user's previous transactions and manage their cards.",
@@ -17,7 +19,7 @@ const projects = [
 	{
 		className: 'project-card item-2',
 		title: 'Restaurant Finder',
-		image: '',
+		image: restaurantFinder,
 		url: 'https://github.com/Arisch24/Restaurant-Finder',
 		description:
 			"A restaurant application that is built with Vue JS, Firebase and Google Maps Javascript API to display the restaurants for the user's to view, edit and also provide reviews for each restaurant on the map. This is a college assignment.",
@@ -50,7 +52,7 @@ export default function Projects() {
 	const projectsComponent = useRef(null);
 
 	useLayoutEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			gsap.timeline()
 				.from('h2', {
 					opacity: 0,

@@ -15,7 +15,7 @@ export default function Experiences() {
 	const experiencesComponent = useRef(null);
 
 	useLayoutEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			gsap.from(['h2', '.showcase', '.resume-btn'], {
 				opacity: 0,
 				y: -100,

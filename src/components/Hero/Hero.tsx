@@ -8,7 +8,7 @@ export default function Hero() {
 	const heroComponent = useRef(null);
 
 	useLayoutEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			gsap.timeline()
 				.from(['h2', 'h1', 'p'], {
 					opacity: 0,
