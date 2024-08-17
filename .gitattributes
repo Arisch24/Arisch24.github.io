@@ -1,0 +1,20 @@
+# Files
+*.ts            	text eol=lf
+*.tsx            	text eol=lf
+*.js            	text eol=lf
+*.mjs           	text eol=lf
+*.css           	text eol=lf
+*.txt           	text eol=lf
+*.json          	text eol=lf
+*.env				text eol=lf
+*.md				text eol=lf
+.editorconfig		text eol=lf
+.eslintignore		text eol=lf
+.prettierrc			text eol=lf
+.gitattributes  	text eol=lf
+.gitignore      	text eol=lf
+.prettierignore		text eol=lf
+package.json		text eol=lf
+next.config.js		text eol=lf
+tsconfig.json		text eol=lf
+tailwind.config.js	text eol=lf
